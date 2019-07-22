@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/redspirit/configservice/issues"
   },
-  "homepage": "https://github.com/redspirit/configservice#readme"
+  "homepage": "https://github.com/redspirit/configservice#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "request": "^2.88.0"
+  }
 }
