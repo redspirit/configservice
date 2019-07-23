@@ -26,7 +26,7 @@ const sync = function (server) {
             return resolve(config);
 
         request.get({
-            url: 'http://' + server + '/config/' + packageFile.name,
+            url: 'http://' + server + '/config/' + packageFile.name + '?env=' + conf,
             json: true
         }, function(err, resp, body) {
             if (err)
