@@ -1,7 +1,6 @@
 
 const request = require("request");
 const fs = require("fs");
-const querystring = require("querystring");
 let argv = require('minimist')(process.argv.slice(2));
 const root = process.cwd();
 
@@ -20,14 +19,14 @@ try {
 
 console.log("Local config:", conf);
 
-const sync = function (serverUrl) {
+const sync = function (server) {
 
     return new Promise(function(resolve, reject) {
-        if (!serverUrl)
+        if (!server)
             return resolve(config);
 
         request.get({
-            url: serverUrl + '?' + querystring({name: packageFile.name}),
+            url: 'http://' + server + '/config/' + packageFile.name,
             json: true
         }, function(err, resp, body) {
             if (err)
