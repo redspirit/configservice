@@ -1,6 +1,6 @@
 {
-  "name": "configservice",
-  "version": "1.0.0",
+  "name": "confservice",
+  "version": "1.0.1",
   "description": "configservice",
   "main": "index.js",
   "scripts": {
