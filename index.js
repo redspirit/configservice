@@ -18,6 +18,7 @@ try {
     console.error('Не удалось прочитать конфиг', confFile);
 }
 
+console.log("Local config:", conf);
 
 const sync = function (serverUrl) {
 
@@ -34,6 +35,7 @@ const sync = function (serverUrl) {
             if(resp.statusCode !== 200) {
                 reject(JSON.parse(body));
             } else {
+                console.log("Used remote config");
                 resolve(JSON.parse(body));
             }
         })
