@@ -27,7 +27,8 @@ const sync = function (server) {
 
         request.get({
             url: 'http://' + server + '/config/' + packageFile.name + '?env=' + conf,
-            json: true
+            json: true,
+            timeout: 5000
         }, function(err, resp, body) {
             if (err)
                 return reject(err);
