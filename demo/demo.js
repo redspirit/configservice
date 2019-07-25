@@ -1,7 +1,5 @@
 
-
 const confservice = require('../');
-
 
 confservice.sync(null).then(function (config) {
     console.log('>>', config);
