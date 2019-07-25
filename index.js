@@ -22,9 +22,9 @@ try {
 
 if(envData['USE_CONFIG']) {
     conf = envData['USE_CONFIG'];
-    console.log("Local config:", conf);
-} else {
     console.log("Local config from env:", conf);
+} else {
+    console.log("Local config:", conf);
 }
 
 let confFile = root + `/config/${conf}.json`;
